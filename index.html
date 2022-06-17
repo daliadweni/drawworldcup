@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body onload="goraa()">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class='table-wrapper'>
+        <div class="container">
+            <button type="button" onclick="qual()" class="btn btn-primary">Primary</button>
+
+            <script>
+                var tab = []
+           
+
+                function goraa() {
+                    var myArray = ["<img width='25px' src='./img/qual.png'> QUALIFIÉ",
+                     "<img width='25px' src='./img/nonqual.png'> NON QUALIFIÉ", 
+                     "<img width='25px' src='./img/qual.png'> QUALIFIÉ", 
+                     "<img width='25px' src='./img/nonqual.png'> NON QUALIFIÉ"];
+
+                    for (var draw = 0; draw < 4; draw++) {
+                        var a = myArray[Math.floor(Math.random() * myArray.length)];
+
+                        tab.push(a);
+                        console.log("apres" + myArray);
+                        const index = myArray.indexOf(a);
+                        if (index > -1) {
+                            myArray.splice(index, 1); // 2nd parameter means remove one item only
+                        } else {
+                            tab.push(myArray[0]);
+                        }
+
+                        console.log("avant" + myArray);
+
+                    }
+               }
+                
+               goraa() ;
+               goraa() ;
+               goraa() ;
+               goraa() ;
+               goraa() ;
+               goraa() ;
+               goraa() ;
+               goraa() ;
+
+                console.log(tab);
+                var val = 0;
+                for (var a = 0; a < listeGroupe.length; a++) {
+
+                    if (a == 0) {
+                        document.write("<div class='row'>");
+                    }
+                    if (a == 2) {
+                        document.write("<div class='row'>");
+                    }
+                    if (a == 4) {
+                        document.write("<div class='row'>");
+                    }
+
+                    document.write(
+                        "<div class='col-6'><table class='table table-bordered border-primary'><thead class='table-primary'><th>N°</th><th>Nom</th> <th>Etat</th> </thead><tbody>"
+                    );
+
+                    document.write("<h1>GROUPE " + eval(a + 1) + "</h1>");
+                    for (var i = 0; i < listeGroupe[a].length; i++) {
+
+
+
+
+                        document.write("  <tr><th>" + eval(i + 1) + "</th><th><img width='25px' src='" + listeGroupe[a][
+                            i
+                        ].img + "'> " + listeGroupe[a][i].name + "</th> <th> " + tab[val] + "</th>    </tr>");
+                        val++;
+                    }
+
+                    document.write(" <tbody></table></div>")
+                    if ((a == 0)) {
+                        document.write("</div>");
+                    }
+                    if ((a == 2)) {
+                        document.write("</div>");
+                    }
+                    if ((a == 4)) {
+                        document.write("</div>");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

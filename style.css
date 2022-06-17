@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "worldcup";
+    src: url(./Qatar2022Arabic-Bold.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: "worldcup";
+
+}
+body{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    background-color: rgba( 71, 147, 227, 1);
+}
+h2{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    padding: 30px 0;
+}
+
+/* Table Styles */
