@@ -4,23 +4,34 @@
 }
 
 *{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+  
     font-family: "worldcup";
 
 }
-body{
-    font-family: Helvetica;
-    -webkit-font-smoothing: antialiased;
-    background-color: rgba( 71, 147, 227, 1);
+
+table{
+    background-color: #fff;
+
 }
-h2{
+body{
+    background-image: url("./img/background.jpg");
+
+    -webkit-font-smoothing: antialiased;
+}
+#headerText{
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    padding: 30px 0;
+}
+#groupeText{
     text-align: center;
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 30px 0;
 }
 

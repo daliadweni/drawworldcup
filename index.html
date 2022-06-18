@@ -8,8 +8,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Qualifying for the second round of the World Cup </title>
     <meta name="description" content="">
+    <link rel="icon" type="image/x-icon" href="./img/world-cup-2022-logo.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
@@ -23,17 +24,21 @@
         <![endif]-->
     <div class='table-wrapper'>
         <div class="container">
-            <button type="button" onclick="qual()" class="btn btn-primary">Primary</button>
+            <br><br>
+            <center><h1 id="headerText"> ⚽🌍🇹🇳 قرعــة كأس الــعالم - الفرق المترشحة للدور الثاني</h1></center>
+<center><button type="button" onclick="emshi()" class="btn btn-primary">انزل هنا و شوف شكون باش يترشح  </button><center>
 
-            <script>
-                var tab = []
+<center><span id="contenu"></span><center>
+
+<script type='text/javascript'>
+                    var tab = []
            
 
                 function goraa() {
-                    var myArray = ["<img width='25px' src='./img/qual.png'> QUALIFIÉ",
-                     "<img width='25px' src='./img/nonqual.png'> NON QUALIFIÉ", 
-                     "<img width='25px' src='./img/qual.png'> QUALIFIÉ", 
-                     "<img width='25px' src='./img/nonqual.png'> NON QUALIFIÉ"];
+                    var myArray = ["<img width='25px' src='./img/qual.png'> مترشح",
+                     "<img width='25px' src='./img/nonqual.png'> ماهواش مترشح", 
+                     "<img width='25px' src='./img/qual.png'> مترشح", 
+                     "<img width='25px' src='./img/nonqual.png'> ماهواش مترشح"];
 
                     for (var draw = 0; draw < 4; draw++) {
                         var a = myArray[Math.floor(Math.random() * myArray.length)];
@@ -52,57 +57,50 @@
                     }
                }
                 
-               goraa() ;
-               goraa() ;
-               goraa() ;
-               goraa() ;
-               goraa() ;
-               goraa() ;
-               goraa() ;
-               goraa() ;
+              
 
-                console.log(tab);
-                var val = 0;
-                for (var a = 0; a < listeGroupe.length; a++) {
-
-                    if (a == 0) {
-                        document.write("<div class='row'>");
-                    }
-                    if (a == 2) {
-                        document.write("<div class='row'>");
-                    }
-                    if (a == 4) {
-                        document.write("<div class='row'>");
-                    }
-
-                    document.write(
-                        "<div class='col-6'><table class='table table-bordered border-primary'><thead class='table-primary'><th>N°</th><th>Nom</th> <th>Etat</th> </thead><tbody>"
-                    );
-
-                    document.write("<h1>GROUPE " + eval(a + 1) + "</h1>");
-                    for (var i = 0; i < listeGroupe[a].length; i++) {
-
-
-
-
-                        document.write("  <tr><th>" + eval(i + 1) + "</th><th><img width='25px' src='" + listeGroupe[a][
-                            i
-                        ].img + "'> " + listeGroupe[a][i].name + "</th> <th> " + tab[val] + "</th>    </tr>");
-                        val++;
-                    }
-
-                    document.write(" <tbody></table></div>")
-                    if ((a == 0)) {
-                        document.write("</div>");
-                    }
-                    if ((a == 2)) {
-                        document.write("</div>");
-                    }
-                    if ((a == 4)) {
-                        document.write("</div>");
-                    }
+               function emshi(){
+                goraa() ;
+                goraa() ;
+                goraa() ;
+                goraa() ;
+                goraa() ;
+                goraa() ;
+                goraa() ;
+                goraa() ;
+            var val = 0;
+            var contenu = "" ;
+            for (var a = 0; a < listeGroupe.length; a++) {
+            
+              
+               
+                contenu+=
+                    "<div class='col-md-8'><table class='table table-bordered border-primary'><thead class='table-primary'><th>N°</th><th>Nom</th> <th>Etat</th> </thead><tbody>"
+                ;
+            
+                contenu+=
+                "<h2 id='groupeText'>: " + eval(a + 1) + " المجموعة</h2>";
+                for (var i = 0; i < listeGroupe[a].length; i++) {
+            
+            
+            
+            
+                    contenu +=
+                    " <tr><th>" + eval(i + 1) + "</th><th><img width='25px' src='" + listeGroupe[a][i].img + "'> " + listeGroupe[a][i].name + "</th> <th> " + tab[val] + "</th>    </tr>";
+                    val++;
                 }
+            
+                contenu+=
+                " <tbody></table></div>" ;
+                  
+               
+            }
+            document.getElementById("contenu").innerHTML = contenu ;
+        }
+                console.log(tab);
+             
             </script>
+
         </div>
     </div>
 
