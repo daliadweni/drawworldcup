@@ -3,7 +3,7 @@ var groupeA=[{name:"Qatar",img:"./img/QAT.webp"},{name:"Ecuador",img:"./img/ECU.
 
 
 var groupeB=[{name:"England",img:"./img/ENG.webp"},{name:"Iran",img:"./img/IRN.webp"}, 
-{name:"Netherlands",img:"./img/NED.webp"},{name: "Wales",img:"./img/WAL.webp"}];
+{name:"USA",img:"./img/USA.webp"},{name: "Wales",img:"./img/WAL.webp"}];
 
 
 var groupeC=[{name:"Argentina",img:"./img/ARG.webp"},{name:"Saudi Arabia",img:"./img/KSA.webp"}, 
